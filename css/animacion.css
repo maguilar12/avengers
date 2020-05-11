@@ -1,0 +1,8 @@
+#div1 {
+   transition: width 2s, height 2s, transform 1s;
+  transition-delay: 1s; 
+}
+#div1:hover {
+  width: 900px;
+}
+ 

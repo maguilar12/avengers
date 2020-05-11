@@ -1,0 +1,38 @@
+{
+    "vengadores":[
+        {    
+        "nombres": "Steve ",
+        "apellidos":"Rogers",
+        "nombredesuperheroe":"Capitan America",
+        "superpoder":"fuerza sobre humana",
+        "trabajoactual":"carpintero",
+        "telefono":"4567-6756",    
+        "email":"steve@vengadores.com"    
+        }
+     
+    ],
+    
+    "gema":[
+        {
+        "nombre": "Gema de la mente",
+        "poder":"poderes psiquicos y capacidad de controlar otras mentes",
+        "portador":" vision",
+        "ubicacion":"Tierra"
+         
+        }
+     
+    ],
+    
+     "villano":[
+        {
+        "nombre": "Loky",
+        "superpoder":"Magia, hechiceria",
+        "origen":"Jotunheim.",
+        "derrotado":"Thor"
+         
+        }
+     
+    ]
+    
+   
+}

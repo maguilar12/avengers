@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Avengers |Son un equipo de superhéroes que se asen llamasr los avengers y se unieron para pelear contra Thanos y luego Iron Man se sacrificó al usar las Gemas para acabar con Thanos y sus secuaces."content="Equipos de superhéroes" >
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>"Los Vengadores"</title>
+    <title>"The Avengers"</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+       <link rel="stylesheet" href="css/animacion.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="vue.js"></script>
+    <script src="vue-router.js"></script>
+     <script src="gtag.js"></script>    
+  
+</head> 
+<style>
+    body { background: linear-gradient(to left, #010808, #99E3E8, #664891, #010808);}
+
+    body::after {
+        content: "";
+        background: url(img/logo.png);
+        opacity: 0.4;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+    }
+
+</style>
+
+<body>
+ 
+    <div class="topnav col-s-12 col-12" id="aveng">
+        <nav>
+            <ul>
+                <li>
+                    <a class="active">
+                        <router-link to="/">Inicio</router-link>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <router-link to="/Quienessomos">¿Quienes Somos?</router-link>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <router-link to="/losvengadores">Los Vengadores</router-link>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <router-link to="/gemas">Gemas</router-link>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <router-link to="/villanos">Villanos</router-link>
+                    </a>
+                </li>
+                 <li>
+                    <a>
+                        <router-link to="/contacto">Contacto</router-link>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        
+        <router-view></router-view>
+    </div>
+
+</body>
+<script src="./vistas/inicioo.vue.js"></script>
+<script src="./vistas/quienessomos.vue.js"></script>
+<script src="./vistas/vengador.vue.js"></script>
+<script src="./vistas/gemas.vue.js"></script>
+<script src="./vistas/villanos.vue.js"></script>
+
+<script src="./componenetes/crear-vengadors.js"></script>
+<script src="./componenetes/cambiar_vengadores.js"></script>
+
+<script src="./componenetes/crear-gema.js"></script>
+<script src="./componenetes/cambiar_gema.js"></script>
+
+<script src="./componenetes/crear-villanos.js"></script>
+<script src="./componenetes/cambiar_villano.js">
+</script>
+<script src="./vistas/contactanos.vue.js"></script>
+<script src="./componenetes/formularios.js"></script>
+
+<script type="text/javascript">
+    Vue.use(VueRouter);
+    var routes = [{
+            path: '/',
+            component: Inicio
+        },
+
+        {
+            path: '/Quienessomos',
+            component: QuienesSomos
+        },
+        {
+            path: '/losvengadores',
+            component: LosVengadores,
+            name: "LosVengadores"
+        },
+        {
+            path: '/gemas',
+            component: Gemas,
+            name: "Gemas"
+        },
+        {
+            path: '/villanos',
+            component: Villanos,
+            name: "Villanos"
+        },
+        {
+            path: '/crear_vengadores',
+            component: CrearVengadores,
+            name: "crear_vengadores"
+        },
+        {
+            path: '/cambiar_vengador/:id',
+            component: CambiarVengador,
+            name: "cambiar_vengador"
+        },
+        {
+            path: '/crear_gema',
+            component: CrearGema,
+            name: "crear_gema"
+        },
+        {
+            path: '/cambiar_gema/:id',
+            component: CambiarGema,
+            name: "cambiar_gema"
+        },
+        {
+            path: '/crear_villano',
+            component: CrearVillano,
+            name: "crear_villano"
+        },
+        {
+            path: '/cambiar_villano/:id',
+            component: CambiarVillano,
+            name: "cambiar_villano"
+        },
+         {
+            path: '/contacto',
+            component: Contacto
+      
+        },
+
+    ];
+
+    var router = new VueRouter({
+        routes: routes,
+    });
+
+    var app = new Vue({
+        el: '#aveng',
+        router: router
+    })
+
+</script>
+
+</html>
